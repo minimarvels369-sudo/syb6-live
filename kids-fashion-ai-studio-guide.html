@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Fashion AI Studio - الدليل الكامل</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .page {
+            padding: 60px 50px;
+            border-bottom: 2px dashed #e0e0e0;
+        }
+        
+        .page:last-child {
+            border-bottom: none;
+        }
+        
+        /* Cover Page */
+        .cover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 50px;
+        }
+        
+        .cover h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .cover .subtitle {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #ffd700;
+        }
+        
+        .cover .tagline {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .feature-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 15px 25px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            font-size: 18px;
+        }
+        
+        /* Section Headers */
+        h2 {
+            color: #764ba2;
+            font-size: 36px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h3 {
+            color: #667eea;
+            font-size: 24px;
+            margin: 30px 0 15px;
+        }
+        
+        /* Problem Solution Section */
+        .problem-box, .solution-box {
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .problem-box {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            color: white;
+        }
+        
+        .solution-box {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+        
+        .problem-item, .solution-item {
+            font-size: 18px;
+            margin: 15px 0;
+            padding-right: 30px;
+            position: relative;
+        }
+        
+        .problem-item::before {
+            content: "❌";
+            position: absolute;
+            right: 0;
+        }
+        
+        .solution-item::before {
+            content: "✅";
+            position: absolute;
+            right: 0;
+        }
+        
+        /* Steps Section */
+        .step-container {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border-right: 5px solid #667eea;
+        }
+        
+        .step-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        
+        .step-content {
+            padding: 10px;
+        }
+        
+        .step-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-right: 3px solid #667eea;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .step-item strong {
+            color: #764ba2;
+        }
+        
+        /* Code/Prompt Blocks */
+        .code-block {
+            background: #2d2d2d;
+            color: #00ff00;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            overflow-x: auto;
+            direction: ltr;
+            text-align: left;
+        }
+        
+        .code-label {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        /* Screenshot Placeholder */
+        .screenshot {
+            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+            padding: 60px;
+            border-radius: 10px;
+            text-align: center;
+            color: #888;
+            margin: 20px 0;
+            border: 2px dashed #ccc;
+        }
+        
+        /* Troubleshooting Section */
+        .trouble-item {
+            background: white;
+            border: 2px solid #ff6b6b;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .trouble-header {
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .trouble-solution {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            border-right: 4px solid #4caf50;
+            margin-top: 15px;
+        }
+        
+        /* Bonus Section */
+        .prompt-category {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 30px 0 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .prompt-item {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-right: 4px solid #f093fb;
+        }
+        
+        .prompt-number {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        
+        /* CTA Buttons */
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Tips */
+        .tip-box {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-right: 5px solid #ffa500;
+        }
+        
+        .tip-box strong {
+            color: #d4380d;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #2d2d2d;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page {
+                padding: 40px 20px;
+            }
+            
+            .cover h1 {
+                font-size: 32px;
+            }
+            
+            .cover .subtitle {
+                font-size: 20px;
+            }
+            
+            h2 {
+                font-size: 28px;
+            }
+            
+            .features {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .page {
+                page-break-after: always;
+            }
+        }
+        
+        /* RTL Support */
+        [dir="rtl"] .code-block {
+            direction: ltr;
+            text-align: left;
+        }
+        
+        /* Highlighting */
+        .highlight {
+            background: #fff3cd;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #856404;
+        }
+        
+        /* Success Message */
+        .success-box {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Page 1: Cover -->
+        <div class="page cover">
+            <h1>Kids Fashion AI Studio</h1>
+            <div class="subtitle">من صورة واحدة إلى كتالوج كامل في 10 دقائق!</div>
+            <div class="tagline">
+                الدليل الشامل لاستخدام الذكاء الاصطناعي<br>
+                في تصوير ملابس الأطفال باحترافية<br>
+                مع Nano Banana × ChatGPT
+            </div>
+            <div class="features">
+                <div class="feature-badge">💰 وفر 15,000 جنيه</div>
+                <div class="feature-badge">⏱️ 10 دقائق فقط</div>
+                <div class="feature-badge">📸 جودة احترافية</div>
+            </div>
+            <div style="margin-top: 50px; font-size: 16px; opacity: 0.9;">
+                Version 1.0 - 2025<br>
+                Developed for Egyptian & Gulf Kids Fashion Brands
+            </div>
+        </div>
+        
+        <!-- Page 2: Problem & Solution -->
+        <div class="page">
+            <h2>🎯 المشكلة التي نحلها</h2>
+            
+            <div class="problem-box">
+                <h3 style="color: white; border: none;">التحديات التي تواجه أصحاب براندات ملابس الأطفال:</h3>
+                <div class="problem-item">تكلفة التصوير الاحترافي: 5,000 - 15,000 جنيه للسيشن الواحد</div>
+                <div class="problem-item">صعوبة إيجاد موديلز أطفال مناسبين (العمر، الشكل، التوفر)</div>
+                <div class="problem-item">الوقت الضائع: حجز استوديو + مصور + موديل + تعديل الصور (أسبوع كامل)</div>
+                <div class="problem-item">Nano Banana موجود لكن صعب! البرومبتات معقدة ومحتاجة خبرة</div>
+                <div class="problem-item">النتائج غير متسقة - كل صورة بشكل مختلف</div>
+                <div class="problem-item">عدم القدرة على عمل variations سريعة للمنتج الواحد</div>
+            </div>
+            
+            <div class="solution-box">
+                <h3 style="color: white; border: none;">✨ الحل السحري: Kids Fashion AI Studio</h3>
+                <div class="solution-item">Custom GPT يكتب لك البرومبتات الاحترافية تلقائياً</div>
+                <div class="solution-item">3 خطوات بسيطة فقط = كتالوج كامل احترافي</div>
+                <div class="solution-item">النتيجة في 10 دقائق (بدلاً من أسبوع)</div>
+                <div class="solution-item">تكلفة = صفر جنيه (فقط اشتراك ChatGPT)</div>
+                <div class="solution-item">تحكم كامل: غير اللوكيشن والمود والإضاءة بضغطة</div>
+                <div class="solution-item">نتائج متسقة: نفس الوجه والجودة في كل الصور</div>
+            </div>
+            
+            <div class="success-box">
+                <strong>📊 النتيجة النهائية:</strong><br>
+                20+ صورة احترافية | 5 لوكيشنز مختلفة | Flat Lay + Models | جودة تسويقية عالية
+            </div>
+            
+            <div class="tip-box">
+                <strong>💡 معلومة مهمة:</strong> الأداة تعمل مع كل أنواع ملابس الأطفال من عمر 0-14 سنة، 
+                وتدعم كل الستايلات (كاجوال، فورمال، رياضي، مناسبات)
+            </div>
+        </div>
+        
+        <!-- Page 3: The 3 Magic Steps -->
+        <div class="page">
+            <h2>🚀 الخطوات الثلاث السحرية</h2>
+            
+            <div class="step-container">
+                <div class="step-header">الخطوة الأولى: توليد وجه الموديل المثالي</div>
+                <div class="step-content">
+                    <div class="step-item">
+                        <strong>1. افتح Kids Fashion AI Studio:</strong><br>
+                        ادخل على الرابط: <a href="https://chatgpt.com/g/g-68f2ee78e63c81919e0f790d84a9ff01-kids-fashion-ai-studio" target="_blank" style="color: #667eea;">chatgpt.com/g/g-68f2ee78e63c81919e0f790d84a9ff01-kids-fashion-ai-studio</a>
+                    </div>
+                    
+                    <div class="step-item">
+                        <strong>2. ارفع صورة القطعة:</strong><br>
+                        اضغط على أيقونة 📎 وارفع صورة الملابس التي تريد تصويرها
+                        <br><small>ملحوظة: الصورة يفضل تكون واضحة وبخلفية بسيطة</small>
+                    </div>
+                    
+                    <div class="step-item">
+                        <strong>3. أجب على الأسئلة الذكية:</strong><br>
+                        - ولد أم بنت؟<br>
+                        - العمر: 2-4 / 5-7 / 8-10 / 11-14 سنة<br>
+                        - لون البشرة: فاتح / قمحي / أسمر<br>
+                        - تريد صورة وجه جاهزة أم توليد وجه جديد؟
+                    </div>
+                    
+                    <div class="step-item">
+                        <strong>4. احصل على برومبت الوجه:</strong><br>
+                        الـ GPT سيعطيك برومبت مفصل لتوليد الوجه، انسخه
+                    </div>
+                    
+                    <div class="code-label">مثال على برومبت توليد الوجه:</div>
+                    <div class="code-block">
+Generate a high-resolution portrait photo of a 6-year-old girl with fair skin tone, 
+light brown hair in two ponytails, and green eyes.
+
+Details:
+- Expression: friendly natural smile showing teeth
+- Framing: Head and shoulders only, straight-on angle  
+- Background: Plain soft gray, evenly lit
+- Lighting: Soft natural daylight from left side creating gentle shadows
+- Technical: 85mm lens, f/2.0, photorealistic render
+- Quality: 8K resolution, ultra-realistic skin texture with natural details
+
+AVOID: cartoon, anime, airbrushed skin, artificial look, over-smoothed features
+                    </div>
+                    
+                    <div class="step-item">
+                        <strong>5. ولّد الوجه في Nano Banana:</strong><br>
+                        - افتح <a href="https://aistudio.google.com/nano" target="_blank" style="color: #667eea;">Google AI Studio - Nano Banana</a><br>
+                        - الصق البرومبت<br>
+                        - اضغط Generate<br>
+                        - احفظ الصورة الناتجة
+                    </div>
+                    
+                    <div class="screenshot">
+                        📸 Screenshot: واجهة Nano Banana مع البرومبت
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step-container">
+                <div class="step-header">الخطوة الثانية: تصوير القطعة على الموديل</div>
+                <div class="step-content">
+                    <div class="step-item">
+                        <strong>1. ارجع للـ GPT واطلب برومبت التصوير:</strong><br>
+                        قل له: "عايز أصور القطعة على الموديل" أو اضغط على "ابدأ التصوير"
+                    </div>
+                    
+                    <div class="step-item">
+                        <strong>2. حدد تفاصيل السيشن:</strong><br>
+                        - اللوكيشن: Indoor (غرفة أطفال / استوديو / كافيه) أو Outdoor (حديقة / شارع / شاطئ)<br>
+                        - المود: Playful / Elegant / Casual / Adventure<br>
+                        - الإضاءة: طبيعية / استوديو<br>
+                        - Props (اختياري): لعب / بالونات / كتب
+                    </div>
+                    
+                    <div class="code-label">مثال على برومبت تصوير كامل:</div>
+                    <div class="code-block">
+Premium lifestyle photography for children's fashion brand.
+
+CRITICAL: Model MUST wear the EXACT blue denim jacket from uploaded reference - no alterations.
+
+MODEL: 6-year-old girl using the uploaded face reference photo
+
+SETTING: Modern bright children's bedroom with white furniture, colorful wall decals, 
+soft toys on shelves, and natural sunlight streaming through sheer curtains
+
+POSE: Sitting cross-legged on a fluffy white rug, holding a teddy bear, 
+looking at camera with natural happy expression
+
+LIGHTING: Soft natural morning light from window creating warm atmosphere
+
+TECHNICAL: 
+- 4:5 vertical format for Instagram
+- 50mm f/1.8 lens at f/2.5
+- Shallow depth of field with background slightly blurred
+
+STYLE: Authentic, lifestyle, warm, premium kids fashion editorial
+
+OUTPUT: Magazine-quality, high-resolution, realistic shadows and textures
+                    </div>
+                    
+                    <div class="step-item">
+                        <strong>3. صور في Nano Banana:</strong><br>
+                        - ارفع صورة القطعة الأصلية<br>
+                        - ارفع صورة الوجه التي ولدتها<br>
+                        - الصق البرومبت من الـ GPT<br>
+                        - اضغط Generate<br>
+                        - انتظر 30-45 ثانية
+                    </div>
+                    
+                    <div class="screenshot">
+                        📸 Screenshot: النتيجة النهائية - طفلة ترتدي الجاكيت
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step-container">
+                <div class="step-header">الخطوة الثالثة: إنشاء Variations (لقطات متنوعة)</div>
+                <div class="step-content">
+                    <div class="step-item">
+                        <strong>1. ارجع للـ GPT واطلب تنويعات:</strong><br>
+                        قل: "عايز 5 لقطات مختلفة" أو "عايز صور من زوايا مختلفة"
+                    </div>
+                    
+                    <div class="step-item">
+                        <strong>2. احصل على برومبتات متنوعة:</strong><br>
+                        الـ GPT سيعطيك:<br>
+                        - Wide Shot (لقطة كاملة)<br>
+                        - Medium Shot (نصفية)<br>
+                        - Close-up (تفاصيل)<br>
+                        - Back View (من الخلف)<br>
+                        - Action Shot (حركة)
+                    </div>
+                    
+                    <div class="step-item">
+                        <strong>3. كرر العملية لكل برومبت:</strong><br>
+                        نفس الطريقة: صورة القطعة + الوجه + البرومبت الجديد = صورة جديدة
+                    </div>
+                    
+                    <div class="step-item">
+                        <strong>4. جرب لوكيشنز مختلفة:</strong><br>
+                        غير المكان من غرفة لحديقة لشاطئ لكافيه - نفس الموديل، أجواء مختلفة!
+                    </div>
+                    
+                    <div class="tip-box">
+                        <strong>💡 نصيحة ذهبية:</strong> احفظ 3-4 وجوه ناجحة (أولاد وبنات بأعمار مختلفة) 
+                        واستخدمهم لكل منتجاتك - هيوفر عليك وقت كبير!
+                    </div>
+                </div>
+            </div>
+            
+            <div class="success-box">
+                🎉 <strong>مبروك!</strong> في 10 دقائق فقط عملت 20 صورة احترافية بتكلفة = صفر!
+            </div>
+        </div>
+        
+        <!-- Page 4: Troubleshooting -->
+        <div class="page">
+            <h2>🔧 حل المشاكل الشائعة - Troubleshooting</h2>
+            
+            <div class="trouble-item">
+                <div class="trouble-header">المشكلة #1: "القطعة طلعت مختلفة عن الأصل"</div>
+                <strong>الأعراض:</strong> اللون مختلف، التصميم اتغير، تفاصيل ناقصة<br>
+                <div class="trouble-solution">
+                    <strong>الحل الفوري:</strong><br>
+                    أضف هذه الجملة في بداية البرومبت:
+                    <div class="code-block">
+CRITICAL INSTRUCTION: The garment must be EXACTLY identical to the uploaded reference image. 
+No creative interpretations, no color changes, no design modifications. 
+Maintain 100% accuracy to original including all logos, patterns, and details.
+                    </div>
+                    <strong>نصيحة إضافية:</strong> ارفع صورة القطعة بجودة عالية وإضاءة واضحة
+                </div>
+            </div>
+            
+            <div class="trouble-item">
+                <div class="trouble-header">المشكلة #2: "وجه الموديل بيتغير في كل صورة"</div>
+                <strong>الأعراض:</strong> ملامح مختلفة، عمر مختلف، تعبيرات غريبة<br>
+                <div class="trouble-solution">
+                    <strong>الحل المضمون:</strong><br>
+                    1. استخدم نفس صورة الوجه <span class="highlight">بالضبط</span> في كل مرة<br>
+                    2. أضف في البرومبت:
+                    <div class="code-block">
+FACE CONSISTENCY: Use the EXACT facial features, expression, and age from the uploaded face reference. 
+Do not alter or reinterpret the face in any way.
+                    </div>
+                    3. لو المشكلة مستمرة، ولّد وجه جديد بمواصفات أوضح
+                </div>
+            </div>
+            
+            <div class="trouble-item">
+                <div class="trouble-header">المشكلة #3: "الألوان مش مظبوطة / باهتة / غامقة"</div>
+                <strong>الأعراض:</strong> الأزرق بقى أخضر، الأحمر باهت، الألوان مش زي الحقيقة<br>
+                <div class="trouble-solution">
+                    <strong>الحل التقني:</strong><br>
+                    أضف تعليمات دقيقة للألوان:
+                    <div class="code-block">
+COLOR ACCURACY: Maintain TRUE-TO-LIFE colors exactly as shown in reference.
+Specific color values: [describe colors precisely - navy blue not just blue, 
+coral pink not just pink, sage green not just green]
+Lighting should not wash out or darken the original colors.
+                    </div>
+                    <strong>Trick:</strong> لو تعرف كود اللون (hex code) اكتبه في البرومبت
+                </div>
+            </div>
+            
+            <div class="trouble-item">
+                <div class="trouble-header">المشكلة #4: "الخلفية مش حلوة / مش واقعية"</div>
+                <strong>الأعراض:</strong> خلفية كرتونية، ألوان مش متناسقة، تفاصيل غريبة<br>
+                <div class="trouble-solution">
+                    <strong>خلفيات مضمونة النجاح:</strong><br>
+                    <strong>للأناقة:</strong>
+                    <div class="code-block">
+"Minimalist Scandinavian children's room with white walls, light wood furniture, 
+and soft natural light through sheer curtains"
+                    </div>
+                    <strong>للمرح:</strong>
+                    <div class="code-block">
+"Bright colorful playground with soft focus background, sunny day, 
+other children playing in blur"
+                    </div>
+                    <strong>للطبيعة:</strong>
+                    <div class="code-block">
+"Sunlit garden with green grass, blooming flowers in soft bokeh, 
+golden hour lighting"
+                    </div>
+                    <strong>للاحترافية:</strong>
+                    <div class="code-block">
+"Clean photography studio with white cyclorama wall, professional lighting setup, 
+subtle shadows"
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trouble-item">
+                <div class="trouble-header">المشكلة #5: "الإضاءة مش طبيعية / ظلال غريبة"</div>
+                <strong>الأعراض:</strong> إضاءة قوية زيادة، ظلال في اتجاهات مختلفة، الصورة مسطحة<br>
+                <div class="trouble-solution">
+                    <strong>إعدادات الإضاءة المثالية:</strong><br>
+                    <strong>إضاءة طبيعية:</strong>
+                    <div class="code-block">
+"Soft natural daylight from large window on left side, creating gentle shadows 
+and warm atmosphere. Fill light from opposite side to soften shadows."
+                    </div>
+                    <strong>إضاءة استوديو:</strong>
+                    <div class="code-block">
+"Professional studio lighting: Key light at 45 degrees, fill light for shadow detail, 
+rim light for separation from background. Soft, even illumination."
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trouble-item">
+                <div class="trouble-header">المشكلة #6: "الـ Pose مش طبيعي / الطفل يبدو متوتر"</div>
+                <strong>الأعراض:</strong> وضعية جسم غريبة، تعبيرات مصطنعة<br>
+                <div class="trouble-solution">
+                    <strong>Poses طبيعية حسب العمر:</strong><br>
+                    <strong>2-4 سنوات:</strong>
+                    <div class="code-block">
+"Natural toddler pose: sitting on floor playing with toys, looking up at camera 
+with curious expression"
+                    </div>
+                    <strong>5-7 سنوات:</strong>
+                    <div class="code-block">
+"Active child pose: mid-movement like skipping, arms relaxed, genuine laugh 
+or smile"
+                    </div>
+                    <strong>8-10 سنوات:</strong>
+                    <div class="code-block">
+"Confident casual pose: leaning against wall, hands in pockets, slight smile, 
+looking directly at camera"
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <strong>🆘 مازال عندك مشكلة؟</strong><br>
+                اسأل الـ GPT مباشرة! اكتب وصف المشكلة وهو هيديك الحل المناسب فوراً.
+                <br><br>
+                مثال: "الصورة طلعت والطفل لابس القطعة بالمقلوب" 
+                <br>الـ GPT هيكتبلك برومبت يحل المشكلة دي تحديداً
+            </div>
+        </div>
+        
+        <!-- Page 5: Bonus - Ready Prompts -->
+        <div class="page">
+            <h2>🎁 BONUS: 20 برومبت جاهز Copy & Paste</h2>
+            
+            <div class="tip-box">
+                <strong>كيف تستخدم البرومبتات دي:</strong><br>
+                1. اختار البرومبت المناسب<br>
+                2. غير [الأجزاء بين الأقواس] حسب احتياجك<br>
+                3. أضف تفاصيل القطعة من صورتك<br>
+                4. Paste في Nano Banana مع الصور
+            </div>
+            
+            <div class="prompt-category">📸 OUTDOOR SHOTS - لقطات خارجية</div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">1</span> <strong>حديقة مشمسة - Sunny Park</strong>
+                <div class="code-block">
+Cheerful [AGE]-year-old [BOY/GIRL] playing in sunny green park. 
+GARMENT: [exact description from your image]
+SETTING: Lush green grass, trees with dappled sunlight, playground equipment in soft blur background
+ACTION: Running with arms outstretched, genuine laugh, hair flowing with movement
+LIGHTING: Golden hour sunlight from behind creating rim light
+TECHNICAL: 85mm f/1.8, shallow DOF, 4:5 vertical
+MOOD: Joyful, energetic, childhood freedom
+                </div>
+            </div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">2</span> <strong>شاطئ - Beach Scene</strong>
+                <div class="code-block">
+[AGE]-year-old [GENDER] at sandy beach during late afternoon.
+GARMENT: [your garment details]
+SETTING: Soft sand, gentle waves in background, seashells scattered around
+POSE: Kneeling in sand building sandcastle, focused expression
+PROPS: Colorful bucket and shovel
+LIGHTING: Soft diffused sunlight through light clouds
+STYLE: Vacation vibes, relaxed, premium beachwear catalog
+                </div>
+            </div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">3</span> <strong>شارع عصري - Urban Street</strong>
+                <div class="code-block">
+Confident [AGE]-year-old in modern city setting.
+GARMENT: [specify exactly]
+LOCATION: Clean urban street, modern architecture, New Cairo style buildings
+POSE: Walking confidently, one hand in pocket, looking over shoulder at camera
+BACKGROUND: Blurred street scene with soft bokeh
+LIGHTING: Natural daylight with urban reflections
+VIBE: Street style, contemporary, fashion-forward kids
+                </div>
+            </div>
+            
+            <div class="prompt-category">📸 INDOOR SHOTS - لقطات داخلية</div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">4</span> <strong>غرفة أطفال - Kids Bedroom</strong>
+                <div class="code-block">
+Cozy bedroom scene with [AGE]-year-old [GENDER].
+GARMENT: [your product]
+ROOM: Bright kids bedroom, white furniture, colorful wall decals, toy shelf
+POSE: Sitting on bed with legs crossed, reading colorful picture book
+LIGHTING: Soft morning light through window with sheer curtains
+ATMOSPHERE: Warm, homey, comfortable
+TECHNICAL: 50mm f/2, warm color grade
+                </div>
+            </div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">5</span> <strong>استوديو احترافي - Studio Shot</strong>
+                <div class="code-block">
+Professional studio portrait of [AGE]-year-old model.
+GARMENT: [exact replication required]
+BACKGROUND: Clean white seamless backdrop
+POSE: Standing straight, hands relaxed at sides, direct eye contact
+LIGHTING: Classic 3-point studio lighting, soft shadows
+STYLE: E-commerce ready, catalog photography
+OUTPUT: High-key, professional, color-accurate
+                </div>
+            </div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">6</span> <strong>كافيه/مطعم - Cafe Scene</strong>
+                <div class="code-block">
+Lifestyle shot in trendy family cafe.
+MODEL: [AGE and GENDER]
+GARMENT: [description]
+SETTING: Modern cafe with wooden tables, plants, warm lighting
+ACTION: Sitting at table with colorful smoothie, chatting animation
+BACKGROUND: Soft blur of cafe interior
+MOOD: Social, trendy, weekend outing
+                </div>
+            </div>
+            
+            <div class="prompt-category">📸 FLAT LAY - تصوير المنتج</div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">7</span> <strong>Minimal White - أبيض بسيط</strong>
+                <div class="code-block">
+Premium flat lay photography of children's [GARMENT TYPE].
+SETUP: Pure white background, garment laid perfectly flat
+STYLING: No wrinkles, all details visible, symmetrical arrangement
+LIGHTING: Even overhead lighting with subtle shadows for depth
+PROPS: None - focus entirely on garment
+ANGLE: Perfect 90-degree top-down
+STYLE: Minimalist, e-commerce ready, professional
+                </div>
+            </div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">8</span> <strong>Styled Flat Lay - مع إكسسوارات</strong>
+                <div class="code-block">
+Artistic flat lay of kids [GARMENT].
+SURFACE: Light wood texture / marble / pastel colored paper
+PROPS: Small toys, flowers, matching accessories arranged aesthetically
+COMPOSITION: Rule of thirds, garment as hero piece
+LIGHTING: Natural light from side creating soft shadows
+STYLE: Instagram-worthy, lifestyle brand, storytelling through props
+                </div>
+            </div>
+            
+            <div class="prompt-category">📸 ACTION SHOTS - لقطات حركية</div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">9</span> <strong>القفز - Jumping</strong>
+                <div class="code-block">
+Dynamic jumping shot of energetic [AGE]-year-old.
+GARMENT: [must match exactly]
+ACTION: Mid-jump with both feet off ground, arms up in joy
+EXPRESSION: Huge genuine smile, eyes bright with excitement
+LOCATION: [indoor/outdoor based on preference]
+TECHNICAL: Fast shutter to freeze motion, some motion blur on edges
+ENERGY: Maximum joy, freedom, childhood exuberance
+                </div>
+            </div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">10</span> <strong>اللعب - Playing</strong>
+                <div class="code-block">
+Natural play moment with [AGE]-year-old [GENDER].
+GARMENT: [your item]
+ACTIVITY: Playing with [specific toy/activity]
+FOCUS: Concentrated on activity, not looking at camera
+SETTING: [appropriate location for the activity]
+CAPTURE: Candid moment, documentary style
+MOOD: Authentic childhood, unstaged, natural
+                </div>
+            </div>
+            
+            <div class="prompt-category">📸 DETAIL SHOTS - لقطات التفاصيل</div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">11</span> <strong>الأزرار والتفاصيل - Buttons & Details</strong>
+                <div class="code-block">
+Macro close-up shot focusing on garment details.
+FOCUS: Buttons, zippers, embroidery, or special design elements
+DEPTH: Extreme shallow depth of field, only detail in focus
+MODEL: Partial view of child wearing garment
+LIGHTING: Soft natural light highlighting texture
+STYLE: Editorial, high-fashion kids wear
+                </div>
+            </div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">12</span> <strong>الخامة والنقشة - Fabric Texture</strong>
+                <div class="code-block">
+Close-up texture shot of children's garment fabric.
+FOCUS: Fabric weave, pattern detail, material quality
+ANGLE: 45 degrees to show texture depth
+LIGHTING: Raking light to emphasize texture
+INCLUDE: Part of garment shape for context
+PURPOSE: Show quality and material details
+                </div>
+            </div>
+            
+            <div class="prompt-category">📸 SEASONAL - موسمية</div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">13</span> <strong>صيف - Summer Vibes</strong>
+                <div class="code-block">
+Bright summer scene with [AGE]-year-old [GENDER].
+GARMENT: [summer piece]
+SETTING: Sunny outdoor location, bright colors, summer elements
+PROPS: Ice cream, sunglasses, beach ball, or summer flowers
+LIGHTING: Bright, high-key, cheerful sunshine
+MOOD: Vacation, fun, carefree summer days
+COLOR PALETTE: Bright, saturated, happy
+                </div>
+            </div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">14</span> <strong>شتاء - Winter Cozy</strong>
+                <div class="code-block">
+Warm winter scene featuring [AGE]-year-old.
+GARMENT: [winter clothing]
+SETTING: Cozy indoor with fireplace/warm lighting or snowy outdoor
+PROPS: Hot chocolate, knit blanket, winter decorations
+LIGHTING: Warm golden tones, soft and inviting
+ATMOSPHERE: Cozy, comfortable, premium winter wear
+STYLING: Layered look if appropriate
+                </div>
+            </div>
+            
+            <div class="prompt-category">📸 SPECIAL OCCASIONS - مناسبات</div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">15</span> <strong>ملابس العيد - Eid/Formal</strong>
+                <div class="code-block">
+Elegant portrait of [AGE]-year-old in formal wear.
+GARMENT: [formal outfit details]
+SETTING: Elegant interior, classic architecture, or garden
+POSE: Poised, confident, slight smile
+LIGHTING: Soft, flattering, classic portrait lighting
+STYLE: Timeless, elegant, special occasion
+MOOD: Celebration, joy, family gathering
+                </div>
+            </div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">16</span> <strong>حفلة عيد ميلاد - Birthday Party</strong>
+                <div class="code-block">
+Birthday celebration scene with excited [AGE]-year-old.
+GARMENT: [party outfit]
+SETTING: Decorated party space, balloons, colorful decorations
+ACTION: Blowing candles, holding present, or dancing
+PROPS: Birthday cake, balloons, party hats
+LIGHTING: Bright, festive, colorful
+ENERGY: Excitement, celebration, pure joy
+                </div>
+            </div>
+            
+            <div class="prompt-category">📸 LIFESTYLE - نمط الحياة</div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">17</span> <strong>وقت الدراسة - Study Time</strong>
+                <div class="code-block">
+Studious [AGE]-year-old at desk with books.
+GARMENT: [school appropriate outfit]
+SETTING: Bright study room, desk with school supplies
+POSE: Focused on homework, pencil in hand
+PROPS: Colorful notebooks, pencil case, globe
+LIGHTING: Natural light from window
+MOOD: Concentrated, smart, back-to-school
+                </div>
+            </div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">18</span> <strong>وقت العائلة - Family Time</strong>
+                <div class="code-block">
+Cozy family moment with [AGE]-year-old [GENDER].
+GARMENT: [casual home wear]
+SETTING: Living room sofa, warm home environment
+ACTION: Reading book, playing board game, or crafting
+ATMOSPHERE: Warm, familial, weekend vibes
+LIGHTING: Soft indoor lighting, homey feel
+STYLE: Lifestyle photography, authentic moments
+                </div>
+            </div>
+            
+            <div class="prompt-category">📸 CREATIVE ANGLES - زوايا إبداعية</div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">19</span> <strong>من الأعلى - Top View</strong>
+                <div class="code-block">
+Creative overhead shot of [AGE]-year-old lying on floor.
+GARMENT: [full outfit visible]
+POSITION: Lying on back, arms and legs arranged creatively
+SURFACE: Colorful rug, grass, or interesting floor pattern
+PROPS: Arranged around child - toys, books, flowers
+EXPRESSION: Looking up at camera, smiling
+STYLE: Creative, editorial, unique perspective
+                </div>
+            </div>
+            
+            <div class="prompt-item">
+                <span class="prompt-number">20</span> <strong>انعكاس - Reflection Shot</strong>
+                <div class="code-block">
+Artistic reflection portrait of [AGE]-year-old.
+GARMENT: [showcase piece]
+SETTING: Near window, mirror, or water for reflection
+COMPOSITION: Child and reflection both visible
+LIGHTING: Soft, creating dreamy atmosphere
+MOOD: Artistic, thoughtful, premium fashion
+TECHNICAL: Focus on child, reflection slightly softer
+                </div>
+            </div>
+            
+            <div class="success-box">
+                💎 <strong>نصيحة احترافية:</strong><br>
+                احفظ البرومبتات اللي تنجح معاك في ملف خاص، 
+                وبمرور الوقت هيكون عندك مكتبة برومبتات مُجربة لكل أنواع القطع!
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-logo">Kids Fashion AI Studio</div>
+            <div>Developed with ❤️ for Egyptian & Gulf Fashion Brands</div>
+            <div style="margin-top: 20px;">
+                <a href="https://chatgpt.com/g/g-68f2ee78e63c81919e0f790d84a9ff01-kids-fashion-ai-studio" 
+                   target="_blank" 
+                   class="cta-button" 
+                   style="display: inline-block; margin: 10px;">
+                    ابدأ الآن - Start Creating
+                </a>
+            </div>
+            <div style="margin-top: 30px; opacity: 0.8;">
+                Version 1.0 | 2025 | All Rights Reserved
+            </div>
+        </div>
+    </div>
+</body>
+</html>
